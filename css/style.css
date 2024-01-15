@@ -1,74 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@700&display=swap');
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #181818;
+body,
+html {
+    height: 100%;
+    margin: 0;
+    color: white;
 }
 
 section {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
+}
+
+.content {
+    z-index: 100;
+}
+
+.binary-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: black;
     overflow: hidden;
 }
 
-section::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: black;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateY(100%);
-    }
-}
-
-section span {
-    position: relative;
-    display: block;
-    width: calc(1.25vw - 2px);
-    height: calc(1.25vw - 2px);
+.binary-item {
+    color: #222222;
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 2px;
     z-index: 2;
-    transition: 2s;
-    font-size: large;
-    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s, font-size 0.3s;
+    transition: 1s;
 }
 
-section span:hover {
-    color: #0f0;
+.binary-item:hover {
+    color: rgb(15, 184, 0);
     transition: 0s;
-}
-
-@media (max-width: 900px) {
-    section span {
-        width: calc(10vw - 2px);
-        height: calc(10vw - 2px);
-    }
-}
-
-@media (max-width: 600px) {
-    section span {
-        width: calc(20vw - 2px);
-        height: calc(20vw - 2px);
-    }
 }
