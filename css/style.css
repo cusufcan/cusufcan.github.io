@@ -40,6 +40,7 @@ section {
     cursor: pointer;
     transition: color 0.3s, font-size 0.3s;
     transition: 1s;
+    user-select: none;
 }
 
 .binary-item:hover {
