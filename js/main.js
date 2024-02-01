@@ -11,6 +11,7 @@ function addRandomBinaryItems(container, count) {
 // ON PAGE LOADED
 document.addEventListener("DOMContentLoaded", function () {
   const binaryContainer = document.getElementById("binary-container");
-  const itemCount = 7000;
+  // EN UCUZ MALIYETLI YOLU BULUNACAK
+  const itemCount = 6000;
   addRandomBinaryItems(binaryContainer, itemCount);
 });
